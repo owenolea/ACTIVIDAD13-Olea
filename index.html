@@ -6,8 +6,6 @@
   <title>Sistema Inteligente de Residuos - Georreferenciación</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
   <div class="app-container dashboard">
@@ -27,21 +25,6 @@
       </div>
 
       <div class="coords">Coordenadas: <span id="coordsDisplay">-34.5222, -58.4815</span></div>
-
-      <div class="form-section">
-        <h3>📋 Generar Reporte</h3>
-        <form id="reportForm" class="report-form">
-          <div class="form-group">
-            <label for="operadorName">Nombre del Operador:</label>
-            <input type="text" id="operadorName" placeholder="Tu nombre" required>
-          </div>
-          <div class="form-group">
-            <label for="descriptionText">Detalle del Registro:</label>
-            <textarea id="descriptionText" placeholder="Descripción de la incidencia..." rows="4" required></textarea>
-          </div>
-          <button type="button" id="generatePdfBtn" class="btn-pdf">📄 Descargar PDF</button>
-        </form>
-      </div>
 
       <div id="listaPOI" class="lista-poi">
         <!-- Tarjetas de puntos de interés generadas dinámicamente -->
