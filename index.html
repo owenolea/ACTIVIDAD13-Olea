@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Inteligente de Residuos - Georreferenciación</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="app-container dashboard">
+    <main id="maincontent" class="map-wrap" role="main" aria-label="Mapa y lista de detecciones">
+      <div id="map" role="region" aria-label="Mapa de detecciones"></div>
+    </main>
+
+    <aside class="sidebar below" role="complementary" aria-label="Lista de detecciones">
+      <div class="sidebar-header">
+        <h1>OTR Vision</h1>
+        <small>Sistema de detección de residuos grandes</small>
+      </div>
+
+      <div class="search-box">
+        <label for="searchInput" class="visually-hidden">Buscar detecciones</label>
+        <input id="searchInput" placeholder="Buscar por nombre o categoría..." aria-label="Buscar detecciones">
+      </div>
+
+      <div class="coords">Coordenadas: <span id="coordsDisplay">-34.5222, -58.4815</span></div>
+
+      <div class="form-section">
+        <h3>📋 Generar Reporte</h3>
+        <form id="reportForm" class="report-form">
+          <div class="form-group">
+            <label for="operadorName">Nombre del Operador:</label>
+            <input type="text" id="operadorName" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="descriptionText">Detalle del Registro:</label>
+            <textarea id="descriptionText" placeholder="Descripción de la incidencia..." rows="4" required></textarea>
+          </div>
+          <button type="button" id="generatePdfBtn" class="btn-pdf">📄 Descargar PDF</button>
+        </form>
+      </div>
+
+      <div id="listaPOI" class="lista-poi">
+        <!-- Tarjetas de puntos de interés generadas dinámicamente -->
+      </div>
+
+      <div id="srStatus" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+      <div class="sidebar-footer">
+        <button id="centerBtn">Volver al Centro</button>
+        <div class="db-count">Base de datos: <span id="dbCount">0</span> Ubicaciones</div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

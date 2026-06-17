@@ -1,0 +1,22 @@
+# --- VS CODE (Configuraciones de entorno) ---
+.vscode/
+
+# --- WINDOWS (Basura del sistema) ---
+Thumbs.db
+desktop.ini
+
+# --- NAVEGADORES (Archivos temporales) ---
+*.log
+*.tmp
+
+# --- EXCLUSIONES CRÍTICAS ---
+# No subir archivos ejecutables ni pesados
+*.exe
+*.msi
+*.bin
+
+# --- CARPETAS DE DATOS TEMPORALES ---
+# Si se agregan en el futuro
+node_modules/
+__pycache__/
+*.pyc
