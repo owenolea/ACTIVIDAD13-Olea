@@ -37,30 +37,6 @@ El módulo OTR Vision permite que operadores municipales localicen incidencias d
 - **Capa de Audio:** Web Audio API para síntesis de tonos + reproducción de archivos con fallback automático.
 - **Capa de Validación:** Búsqueda en tiempo real, filtrado de incidencias, sincronización tarjeta-mapa.
 
-## 💻 Desarrollo
-
-Se construyó una aplicación web completa que lee datos del formulario y genera reportes en PDF usando la librería **jsPDF**:
-
-**Formulario de Captura:**
-- Nombre del Operador/Alumno
-- Detalle o Descripción del Registro (textarea para texto largo)
-
-**El sistema valida que los campos obligatorios estén completos**, diseña un encabezado colorido, ajusta el contenido automáticamente y descarga el archivo sin necesidad de backend.
-
-**Funcionalidades implementadas:**
-- ✅ Captura dinámica de datos del formulario
-- ✅ Generación automática del PDF en el navegador (sin servidor)
-- ✅ Encabezado visual con color naranja (#e65c00) y tipografía clara
-- ✅ Ajuste de texto largo mediante salto de líneas en el PDF
-- ✅ Inclusión de fecha y hora de emisión (formato argentino)
-- ✅ Descarga automática del archivo con nombre seguro: `Reporte_[Nombre]_[Timestamp].pdf`
-- ✅ Validación de campos antes de generar
-- ✅ Limpieza de formulario tras generación exitosa
-- ✅ Manejo robusto de errores con alertas informativas
-
-**Librerías CDN utilizadas:**
-- `jsPDF` (v2.5.1) - Generación de documentos PDF
-- `html2canvas` (v1.4.1) - Captura de elementos HTML (fallback opcional)
 
 
 ## 📁 Estructura del Repositorio
